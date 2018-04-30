@@ -130738,7 +130738,7 @@ AWS.ParamValidator = AWS.util.inherit({
       if (AWS.util.Buffer.isBuffer(value) || value instanceof Stream) return;
     }
 
-    var types = ['Buffer', 'Stream', 'File', 'Blob', 'ArrayBuffer', 'DataView'];
+    var types = ['Buffer', 'Stream', 'ReadStream', 'File', 'Blob', 'ArrayBuffer', 'DataView'];
     if (value) {
       for (var i = 0; i < types.length; i++) {
         if (AWS.util.isType(value, types[i])) return;
@@ -150607,4 +150607,3 @@ if (typeof self !== 'undefined') self.AWS = AWS;
  */
 require('../clients/browser_default');
 },{"../clients/browser_default":171,"./browser_loader":239,"./core":242}]},{},[490]);
-
